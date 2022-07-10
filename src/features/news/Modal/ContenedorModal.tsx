@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { ContenedorModal, TarjetaModal, CloseButton } from "../styled";
 import CloseImg from "../../../assets/close.png";
-import {INoticiasNormalizadas }from "../types";
+
 
 interface IContainerModal {
   Close: () => void;
