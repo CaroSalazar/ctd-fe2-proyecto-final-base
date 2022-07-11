@@ -1,5 +1,5 @@
 import { ESTADO_FETCH } from "./constants";
-import citaReducer, { EstadoCita, limpiar } from "./citaSlice";
+import citaReducer, { EstadoCita } from "./citaSlice";
 
 describe("Reducer", () => {
   const initialState: EstadoCita = {

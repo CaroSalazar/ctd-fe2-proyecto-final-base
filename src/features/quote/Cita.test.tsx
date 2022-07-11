@@ -39,9 +39,8 @@ describe("Cita", () => {
     userEvent.click(btnCitaAleatoria);
 
     expect(await screen.findByText("CARGANDO...")).toBeInTheDocument();
-    expect(await await screen.findByText("Homer Simpson")).toBeInTheDocument();
-    expect(
-      await await screen.findByText("Gah, stupid sexy Flanders!")
+    expect(await screen.findByText("Homer Simpson")).toBeInTheDocument();
+    expect(await screen.findByText("Gah, stupid sexy Flanders!")
     ).toBeInTheDocument();
   });
 
@@ -54,8 +53,8 @@ describe("Cita", () => {
     userEvent.click(btnBuscarCita);
 
     expect(await screen.findByText("CARGANDO...")).toBeInTheDocument();
-    expect(await await screen.findByText("Bart Simpson")).toBeInTheDocument();
-    expect(await await screen.findByText("Eat my shorts")).toBeInTheDocument();
+    expect(await screen.findByText("Bart Simpson")).toBeInTheDocument();
+    expect(await screen.findByText("Eat my shorts")).toBeInTheDocument();
   });
 
   it("Se debe renderizar un mensaje de error al ingresar un numero en el input de autor", async () => {
@@ -79,13 +78,13 @@ describe("Cita", () => {
     const btnBuscarCita = screen.getByRole("button", { name: "Obtener Cita" });
     userEvent.click(btnBuscarCita);
 
-    expect(await await screen.findByText("Eat my shorts")).toBeInTheDocument();
+    expect(await screen.findByText("Eat my shorts")).toBeInTheDocument();
 
     const btnBorrar = screen.getByRole("button", {name: "Borrar"});
     userEvent.click(btnBorrar);
 
     expect( await screen.findByText("No se encontro ninguna cita")).toBeTruthy();
-    expect( await screen.getAllByPlaceholderText("Ingresa el nombre del autor")
+    expect( screen.getAllByPlaceholderText("Ingresa el nombre del autor")
     ).toBeTruthy();
   });
 
@@ -98,9 +97,9 @@ describe("Cita", () => {
     userEvent.click(btnBuscarCita);
 
     expect(await screen.findByText("CARGANDO...")).toBeInTheDocument();
-    expect(await await screen.findByText("Homer Simpson")).toBeInTheDocument();
+    expect(await screen.findByText("Homer Simpson")).toBeInTheDocument();
     expect(
-      await await screen.findByText("Gah, stupid sexy Flanders!")
+       await screen.findByText("Gah, stupid sexy Flanders!")
     ).toBeInTheDocument();
   });
 });
