@@ -4,7 +4,7 @@ import { INoticiasNormalizadas } from "./types";
 import { ContenedorNoticias, ListaNoticias, TituloNoticias } from "./styled";
 import ModalPremium from "./Modal/ModalPremium";
 import ModalComun from "./Modal/ModalComun";
-import TarjetaNoticias from "./TarjetaNoticias/TarjetaNoticia";
+import TarjetaNoticias from "./TarjetaNoticias/TarjetaNoticias";
 import { capitalizeAll, getMinutes } from "./utils";
 
 const Noticias = () => {
